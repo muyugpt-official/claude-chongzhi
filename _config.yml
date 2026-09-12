@@ -1,0 +1,18 @@
+title: Claude充值 / Claude Pro、Max 国内购买指南 2026
+description: Claude充值、Claude Pro/Max 怎么购买：国内充值路径、支付宝微信付款、Pro 与 Max 区别、Claude Code 付费、多久到账，以及会员和 Anthropic API 的区别。MuyuGPT 独立第三方订阅指南，官网 muyugpt.com。
+url: https://muyugpt-official.github.io
+baseurl: /claude-chongzhi
+lang: zh-CN
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
