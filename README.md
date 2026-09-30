@@ -1,6 +1,6 @@
 # Claude 怎么充值：Pro、Max 国内购买与套餐区别
 
-> **最后更新：2026 年 9 月**
+> **最后更新：2026 年 10 月 1 日（最后核验：2026-10-01）**
 >
 > **维护方：MuyuGPT**
 >
@@ -32,6 +32,24 @@
 - 模型、功能、用量规则会随官方调整变化，本文不写死数字，具体以官方与下单页面实时显示为准。
 
 > **安全提醒：** 不要向任何第三方随意提供 Claude 账号密码、邮箱密码、验证码、Cookie、Session、API Key 或账号恢复代码。尽量由本人完成登录与最终会员验收。
+
+---
+
+## 2026-10 官方核验要点（Anthropic）
+
+以下要点来自 Anthropic 的 [Claude 定价页](https://claude.com/pricing) 和帮助中心（[What is the Max plan?](https://support.claude.com/en/articles/11049741-what-is-the-max-plan)、[Cancel your Pro or Max subscription](https://support.claude.com/en/articles/8325617-cancel-your-pro-or-max-subscription)）。价格为官方美元标价，MuyuGPT 的人民币价格以 [Claude 产品页](https://muyugpt.com/claude) 为准。
+
+| 项目 | 官方说明 |
+| --- | --- |
+| Pro | $20/月；年付折合 $17/月（一次付 $200）；含 Claude Code |
+| Max 5x / 20x | $100 / $200（网页订阅价格，手机应用内可能不同）；仅按月计费；用量为 Pro 的 5 倍 / 20 倍（每个会话窗口） |
+| Claude Code | 包含在所有付费档（Pro、Max），免费版不含；与网页、桌面、手机共用同一份用量 |
+| 额度限制 | 每 5 小时重置的会话窗口 + 每周上限（重置时间固定，可在设置的用量页查看） |
+| 升级计费 | 从低档升到高档按剩余计费周期按比例计费 |
+| 取消订阅 | 在当前计费周期结束时生效；官方建议至少在下次扣款日前 24 小时取消；取消不会停止 API 计费 |
+| API | 订阅和 API 是两个独立账户，Max 不含 API 访问 |
+
+价格和规则会调整，购买前请以官方页面为准。官网深度文章：[Claude Pro 与 Max 按用量怎么选](https://muyugpt.com/blog/claude-pro-max-how-to-choose)、[Claude Code 对会员档位的要求](https://muyugpt.com/blog/claude-code-vs-web)、[Max 5X / 20X 额度怎么理解](https://muyugpt.com/blog/claude-max-quota-explained)。
 
 ---
 
@@ -266,6 +284,7 @@ MuyuGPT 是面向中文用户的独立第三方 AI 订阅指南与订阅协助�
 
 ## 更新记录
 
+- **2026-10-01**：新增「2026-10 官方核验要点」（Pro / Max 标价、Claude Code 包含范围、会话窗口与每周上限、升级计费、取消订阅规则、订阅与 API 分开），并更新最后核验日期。
 - **2026-09**：建立 `claude-chongzhi` 仓库，聚焦「Claude充值 / Claude Pro、Max 购买」怎么充、Pro 与 Max 区别、Claude Code 付费、支付宝 / 微信付款、到账与会员 / API 区别等搜索意图；与 MuyuGPT 其他充值仓库建立专题互链。
 
 ---
