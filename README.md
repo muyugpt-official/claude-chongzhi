@@ -53,6 +53,18 @@
 
 ---
 
+## 按问题找文档
+
+| 你想解决的问题 | 看这篇 |
+| --- | --- |
+| Free / Pro / Max 5x / 20x 各包含什么，限额怎么算 | [Claude 套餐与用量限制手册](./docs/claude-plans-and-limits-2026.md) |
+| Claude Code 用订阅还是 API key，为什么会多出 API 账单 | [Claude Code 登录与计费](./docs/claude-code-login-and-billing.md) |
+| 怎么升级、怎么取消、什么时候生效、能不能退款 | [Claude 计费、升级、取消与退款](./docs/claude-billing-cancel-refund.md) |
+| 怎么用支付宝 / 微信开通 | 本页第三、四节与 [国内充值指南](https://github.com/muyugpt-official/ai-subscription-guide/blob/main/docs/claude/claude-pro-alipay-wechat-recharge.md) |
+| 找第三方代充，怎么判断安不安全 | [GPT代充 / ChatGPT代充安全专题](https://github.com/muyugpt-official/gpt-daichong)（判断方法同样适用于 Claude） |
+
+---
+
 ## 目录
 
 - [一、Claude充值是什么意思？](#一claude充值是什么意思)
@@ -178,6 +190,8 @@ Claude Code 是面向开发者的命令行 / 编码场景使用方式。它与�
 
 国内付款相关说明见 👉 [Claude Code 能支付人民币吗？国内充值](https://github.com/muyugpt-official/gpt-daichong/blob/main/docs/claude-code-rmb.md) 与 👉 [Claude Code 订阅](https://github.com/muyugpt-official/ai-subscription-guide/blob/main/docs/claude/claude-code-subscription.md)。
 
+
+**2026-10 官方说明：** 按 Anthropic 的 [Claude 定价页](https://claude.com/pricing)，**Claude Code 包含在所有付费档（Pro 和 Max），免费版不含**，并与网页、桌面、手机共用同一份用量。Claude Code 有两种登录方式：用 Claude 订阅登录走套餐用量，用控制台 API 密钥登录则按 token 计费，两者是不同的账户。环境变量 `ANTHROPIC_API_KEY` 被设置时，Claude Code 会优先使用它，这是"买了订阅却有 API 账单"最常见的原因。完整说明见 👉 [Claude Code 登录与计费](./docs/claude-code-login-and-billing.md)。
 ---
 
 ## 十、Claude充值一般多久到账 / 不到账怎么办？
@@ -202,6 +216,13 @@ Claude Code 是面向开发者的命令行 / 编码场景使用方式。它与�
 
 买之前先想清楚你要的是「网页会员」「Claude Code 使用」还是「API 额度」。
 
+
+补充几条已核验的要点（2026-10-01，来源：Anthropic 帮助中心）：
+
+- Claude 订阅（claude.ai）和控制台（Console）是**两个独立账户**，可以用同一个邮箱，但余额互不通用；
+- **Max 不含 API 访问**；需要把 Claude 放进自己的产品，要单独开通并预付 API 账户；
+- **取消订阅不会停止 API 计费**，要到控制台单独处理；
+- 这些细节的展开见 [Claude Code 登录与计费](./docs/claude-code-login-and-billing.md) 与 [Claude 计费、升级、取消与退款](./docs/claude-billing-cancel-refund.md)。
 ---
 
 ## 十二、通过 MuyuGPT 充值的流程
@@ -246,6 +267,21 @@ MuyuGPT 是独立第三方 AI 订阅指南与订阅协助平台，**不是 Anthr
 
 ---
 
+**Claude Pro 包含 Claude Code 吗？**
+包含。按 Claude 定价页，Claude Code 包含在所有付费档（Pro 和 Max），免费版不含，与网页端共用同一份用量。
+
+**Max 5x 和 20x 是"所有额度"的 5 倍和 20 倍吗？**
+不是。倍数针对的是相对 Pro 的**每个会话窗口**用量；另外还有每周上限，所以高档位也会触顶。详见 [Claude 套餐与用量限制手册](./docs/claude-plans-and-limits-2026.md)。
+
+**Claude 订阅取消后什么时候生效？**
+在当前计费周期结束时生效，期间仍可使用；官方建议至少在下次扣款日前 24 小时取消。取消不会停止 API 计费。详见 [Claude 计费、升级、取消与退款](./docs/claude-billing-cancel-refund.md)。
+
+**我买了订阅，为什么还出现 API 账单？**
+最常见的原因是环境变量 `ANTHROPIC_API_KEY` 被设置了，Claude Code 因此优先使用 API 密钥；其次是你同意了用量用完后改用 API 额度。在会话里输入 `/status` 确认当前生效的登录方式。详见 [Claude Code 登录与计费](./docs/claude-code-login-and-billing.md)。
+
+**Claude 订阅能退款吗？**
+Anthropic 的消费者条款一般把付款视为不可退，取消只停止下一期扣款；通过 Apple 订阅的只有 Apple 能处理退款。细节和不确定之处见 [Claude 计费、升级、取消与退款](./docs/claude-billing-cancel-refund.md)。
+
 ## 十四、相关阅读
 
 **MuyuGPT 的 AI 充值仓库矩阵：**
@@ -258,6 +294,9 @@ MuyuGPT 是独立第三方 AI 订阅指南与订阅协助平台，**不是 Anthr
 
 **Claude 深入教程：**
 
+- [Claude 套餐与用量限制手册](./docs/claude-plans-and-limits-2026.md)
+- [Claude Code 登录与计费](./docs/claude-code-login-and-billing.md)
+- [Claude 计费、升级、取消与退款](./docs/claude-billing-cancel-refund.md)
 - [Claude Pro / Max 国内充值指南](https://github.com/muyugpt-official/ai-subscription-guide/blob/main/docs/claude/claude-pro-alipay-wechat-recharge.md)
 - [Claude Max 和 Pro 有什么区别](https://github.com/muyugpt-official/ai-subscription-guide/blob/main/docs/claude/claude-max-vs-pro.md)
 - [Claude Pro 怎么取消](https://github.com/muyugpt-official/ai-subscription-guide/blob/main/docs/claude/claude-pro-cancel.md)
@@ -284,6 +323,7 @@ MuyuGPT 是面向中文用户的独立第三方 AI 订阅指南与订阅协助�
 
 ## 更新记录
 
+- **2026-10-01**：新增 `docs/` 下三篇手册——套餐与用量限制、Claude Code 登录与计费、计费/升级/取消/退款；README 增加「按问题找文档」索引、第九、十一节的官方说明补充和 5 条 FAQ。
 - **2026-10-01**：新增「2026-10 官方核验要点」（Pro / Max 标价、Claude Code 包含范围、会话窗口与每周上限、升级计费、取消订阅规则、订阅与 API 分开），并更新最后核验日期。
 - **2026-09**：建立 `claude-chongzhi` 仓库，聚焦「Claude充值 / Claude Pro、Max 购买」怎么充、Pro 与 Max 区别、Claude Code 付费、支付宝 / 微信付款、到账与会员 / API 区别等搜索意图；与 MuyuGPT 其他充值仓库建立专题互链。
 
